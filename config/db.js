@@ -16,9 +16,10 @@ pool
     console.log("✅ PostgreSQL Connected");
     client.release();
   })
-  .catch((err) => {
-    console.error("❌ DB Connection Error:", err.message);
-  });
+  .catch(err => {
+    console.error("❌ DB Connection Error FULL:");
+    console.error(err);
+});
 console.log("DATABASE_URL =", process.env.DATABASE_URL);
 
 module.exports = pool;
